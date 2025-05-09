@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #f3f4f7, #e3eaf1);
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background: #4c6ef5;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2em;
+  }
+  
+  .gallery {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .photo {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .photo img:hover {
+    transform: scale(1.08);
+  }
+  
+  footer {
+    text-align: center;
+    background: #343a40;
+    color: #ddd;
+    padding: 20px;
+    font-size: 0.9em;
+  }
+  
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .lightbox.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+  
+ 
+
+   

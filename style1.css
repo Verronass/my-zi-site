@@ -1,0 +1,44 @@
+/* Базові стилі */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    transition: background 0.3s, color 0.3s;
+    margin: 0;
+    padding: 40px;
+  }
+  
+  /* Кнопка */
+  .theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+  
+  /* Світла тема (за замовчуванням) */
+  .container {
+    background-color: #f5f5f5;
+    color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Темна тема — активується, коли checkbox обраний */
+  #toggle-theme:checked ~ .container {
+    background-color: #222;
+    color: #f5f5f5;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  }
+  
+  #toggle-theme:checked ~ .theme-btn {
+    background-color: #555;
+  }
+  

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя Галерея</title>
+  <link rel="stylesheet" href="stylesite.css">
+</head>
+<body>
+ 
+
+  <header>
+    <h1>Давайте згадаємо наші милі моменти</h1>
+  </header>
+
+
+  <main class="gallery">
+    <div class="gallery">
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-26-45.jpg" alt="Фото 1"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-27-17.jpg" alt="Фото 2"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-27-21.jpg" alt="Фото 3"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-27-25.jpg" alt="Фото 4"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-27-32.jpg" alt="Фото 5"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-27-36.jpg" alt="Фото 6"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-27-39.jpg" alt="Фото 7"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-42-17.jpg" alt="Фото 8"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-42-33.jpg" alt="Фото 9"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-42-36.jpg" alt="Фото 10"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-42-41.jpg" alt="Фото 11"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-42-50.jpg" alt="Фото 12"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-42-53.jpg" alt="Фото 13"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-42-59.jpg" alt="Фото 14"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-43-03.jpg" alt="Фото 15"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-43-06.jpg" alt="Фото 16"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-43-32.jpg" alt="Фото 17"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-43-35.jpg" alt="Фото 18"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-43-38.jpg" alt="Фото 19"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-43-41.jpg" alt="Фото 20"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-43-45.jpg" alt="Фото 21"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-43-49.jpg" alt="Фото 22"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-43-52.jpg" alt="Фото 23"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-43-55.jpg" alt="Фото 24"></div>
+        <div class="photo"><img src="img_group/photo_2025-05-05_23-44-00.jpg" alt="Фото 25"></div>
+      </div>
+      
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Розгорнуте фото">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 | Галерея від тебе ❤️</p>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        lightboxImg.src = img.src;
+      });
+    });
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
